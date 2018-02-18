@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">UNavailable</string>
+    <string name="is_reocurring">Is Re-ocurring</string>
+    <string name="is_onetime">Is One-time</string>
+    <string name="is_for_all_contacts">All Incoming Calls</string>
+    <string name="is_for_specific_contacts">Only Specific Calls</string>
+    <string name="add_missed_call_message_button">ADD MESSAGE</string>
+    <string name="missed_call_message">Missed Call Message</string>
 </resources>

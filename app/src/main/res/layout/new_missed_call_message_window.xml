@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+
+    <TextView
+        android:id="@+id/time_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/big_text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/time_to"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:text="12:00" />
+
+    <TextView
+        android:id="@+id/time_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/big_text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/time_from"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:text="03:00" />
+
+    <EditText
+        android:id="@+id/missed_call_message"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/missed_call_message"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_from" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Time From"
+        app:layout_constraintEnd_toEndOf="@+id/time_from"
+        app:layout_constraintStart_toStartOf="@+id/time_from"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Time To"
+        app:layout_constraintEnd_toEndOf="@+id/time_to"
+        app:layout_constraintStart_toStartOf="@+id/time_to"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/is_reocurring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:switchPadding="10dp"
+        android:text="@string/is_reocurring"
+        android:textOff="@string/is_reocurring"
+        android:textOn="@string/is_onetime"
+        android:textStyle="bold"
+        android:thumbTint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/all_incoming_calls_specific"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missed_call_message"
+        tools:checked="false" />
+
+    <Switch
+        android:id="@+id/all_incoming_calls_specific"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_for_all_contacts"
+        android:textStyle="bold"
+        android:thumbTint="@color/colorPrimary"
+        app:layout_constraintBaseline_toBaselineOf="@+id/is_reocurring"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/is_reocurring" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_of_selected_contacts"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/is_reocurring"
+        tools:listitem="@layout/contact_item" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/add_missed_call_message_button"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_of_selected_contacts" />
+
+</android.support.constraint.ConstraintLayout>

@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nonsobiose.unavailable.MainActivity">
+    tools:context="com.nonsobiose.unavailable.MessagesActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/list_of_pending_missed_call_messages"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/pending_message_item" />
+        tools:listitem="@layout/message_item" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_missed_call_message_button"
@@ -26,4 +25,5 @@
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
